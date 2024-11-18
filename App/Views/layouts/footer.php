@@ -1,13 +1,10 @@
-    <footer class="footer mt-auto py-3">
-      <div class="container">
-        <span class="text-muted">### Rodapé.</span>
-      </div>
-    </footer>
+<footer class="footer mt-auto py-3 bg-body-tertiary">
+    <div class="container text-center">
+        <span class="text-body-secondary">&copy; 2024 - Todos os direitos reservados - Bruno Hideki Sato Misufara</span>
+    </div>
+</footer>
 
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="http://<?php echo APP_HOST; ?>/public/js/jquery-3.5.1.min.js"></script> 
-    <script src="http://<?php echo APP_HOST; ?>/public/js/bootstrap.bundle.min.js"></script>
-       
-  </body>
+<script src="http://localhost/CRUD-Produtos/js/bootstrap.bundle.min.js"></script>
+</body>
+
 </html>
