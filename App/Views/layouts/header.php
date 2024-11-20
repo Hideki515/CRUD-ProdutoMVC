@@ -6,6 +6,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="http://<?php echo APP_HOST; ?>/public/css/bootstrap.min.css">
     <!-- Css para o navbar -->
@@ -27,22 +30,22 @@
             <div class="collapse navbar-collapse" id="navbarCollapse">
                 <ul class="navbar-nav mr-auto">
                     <li
-                        class="nav-item <?php if($viewVar['nameController'] == "HomeController") { ?> active <?php } ?>">
+                        class="nav-item <?php if ($viewVar['nameController'] == "HomeController") { ?> active <?php } ?>">
                         <a class="nav-link" href="http://<?php echo APP_HOST; ?>">Home<span
                                 class="sr-only">(current)</span></a>
                     </li>
                     <li
-                        class="nav-item <?php if(($viewVar['nameController'] == "ProdutoController") AND ($viewVar['nameAction'] == "listar")){ ?> active <?php } ?>">
-                        <a class="nav-link" href="http://<?php echo APP_HOST."/produto/listar"; ?>">Listar Produtos</a>
+                        class="nav-item <?php if (($viewVar['nameController'] == "ProdutoController") and ($viewVar['nameAction'] == "listar")) { ?> active <?php } ?>">
+                        <a class="nav-link" href="http://<?php echo APP_HOST . "/produto/listar"; ?>">Listar Produtos</a>
                     </li>
                     <li
-                        class="nav-item <?php if(($viewVar['nameController'] == "ProdutoController") AND ($viewVar['nameAction'] == "cadastrar")){ ?> active <?php } ?>">
-                        <a class="nav-link" href="http://<?php echo APP_HOST."/produto/cadastrar"; ?>">Cadastrar
+                        class="nav-item <?php if (($viewVar['nameController'] == "ProdutoController") and ($viewVar['nameAction'] == "cadastrar")) { ?> active <?php } ?>">
+                        <a class="nav-link" href="http://<?php echo APP_HOST . "/produto/cadastrar"; ?>">Cadastrar
                             Produtos</a>
                     </li>
                     <li
-                        class="nav-item <?php if($viewVar['nameController'] == "UsuarioController") { ?> active <?php } ?>">
-                        <a class="nav-link" href="#">Usuários</a>
+                        class="nav-item <?php if ($viewVar['nameController'] == "UsuarioController") { ?> active <?php } ?>">
+                        <a class="nav-link" href="http://<?php echo APP_HOST . "/usuario/listar"; ?>">Usuários</a>
                     </li>
                 </ul>
 
