@@ -49,7 +49,7 @@
                         <label for="senha">Senha:</label>
                         <input type="password" class="form-control <?php if ($Sessao::retornaErro('erroSenha') != "")
                             echo "is-invalid"; ?>" name="senha" value="<?php if (isset($viewVar['usuario']))
-                                  echo $viewVar['usuario']->getEmail(); ?>">
+                                  echo $viewVar['usuario']->getSenha(); ?>">
                         <div class="invalid-feedback">
                             <?php echo $Sessao::retornaErro('erroSenha'); ?>
                         </div>
@@ -61,11 +61,14 @@
                         <select class="form-control <?php if ($Sessao::retornaErro('erroPermissao') != "")
                             echo "is-invalid"; ?>" name="permissao">
                             <option value="Selecione" hidden>Selecione</option>
-                            <option value="Admin" <?php echo isset($viewVar['usuario']) && $viewVar['usuario']->getPermissao() === 'Admin' ? 'selected' : ''; ?>>
+                            <option value="Admin"
+                                <?php echo isset($viewVar['usuario']) && $viewVar['usuario']->getPermissao() === 'Admin' ? 'selected' : ''; ?>>
                                 Administrador</option>
-                            <option value="Normal" <?php echo isset($viewVar['usuario']) && $viewVar['usuario']->getPermissao() === 'Normal' ? 'selected' : ''; ?>>
+                            <option value="Normal"
+                                <?php echo isset($viewVar['usuario']) && $viewVar['usuario']->getPermissao() === 'Normal' ? 'selected' : ''; ?>>
                                 Normal</option>
-                            <option value="Leitura" <?php echo isset($viewVar['usuario']) && $viewVar['usuario']->getPermissao() === 'Leitura' ? 'selected' : ''; ?>>
+                            <option value="Leitura"
+                                <?php echo isset($viewVar['usuario']) && $viewVar['usuario']->getPermissao() === 'Leitura' ? 'selected' : ''; ?>>
                                 Somente Leitura</option>
                         </select>
                         <!-- Mensagem para Seleionar Permissão Válido -->
