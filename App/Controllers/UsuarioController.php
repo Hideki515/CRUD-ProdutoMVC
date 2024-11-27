@@ -274,11 +274,6 @@ class UsuarioController extends Controller
             Sessao::gravaMensagem('<div class="alert alert-success" role="alert">Usuário atualizado com sucesso.</div>');
             // Sempre limpa os erros ao entrar na função
             Sessao::limpaErro();
-        } elseif ($cmd == 'novo') { // Salvar novo usuario
-            $usuarioDAO->salvar($objUsuario);
-            Sessao::gravaMensagem('<div class="alert alert-success" role="alert">Novo usuário gravado com sucesso.</div>');
-            // Sempre limpa os erros ao entrar na função
-            Sessao::limpaErro();
         }
 
         // Limpa Tudo
