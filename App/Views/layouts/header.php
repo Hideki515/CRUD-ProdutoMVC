@@ -36,7 +36,8 @@
                     </li>
                     <li
                         class="nav-item <?php if (($viewVar['nameController'] == "ProdutoController") and ($viewVar['nameAction'] == "listar")) { ?> active <?php } ?>">
-                        <a class="nav-link" href="http://<?php echo APP_HOST . "/produto/listar"; ?>">Listar Produtos</a>
+                        <a class="nav-link" href="http://<?php echo APP_HOST . "/produto/listar"; ?>">Listar
+                            Produtos</a>
                     </li>
                     <li
                         class="nav-item <?php if (($viewVar['nameController'] == "ProdutoController") and ($viewVar['nameAction'] == "cadastrar")) { ?> active <?php } ?>">
@@ -57,7 +58,7 @@
                         <div class="dropdown-menu dropdown-menu-right">
                             <a class="dropdown-item" href="#">Perfil</a>
                             <a class="dropdown-item" href="#">Trocar Senha</a>
-                            <a class="dropdown-item" href="#">Sair</a>
+                            <a class="dropdown-item" href="http://<?php echo APP_HOST; ?>/usuario/logout">Sair</a>
                         </div>
                     </li>
                 </ul>

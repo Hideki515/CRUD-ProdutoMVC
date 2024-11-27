@@ -1,6 +1,7 @@
 <footer class="footer mt-auto py-3 bg-body-tertiary">
     <div class="container text-center">
-        <span class="text-body-secondary">&copy; 2024 - Todos os direitos reservados - Bruno Hideki Sato Misufara</span>
+        <span class="text-body-secondary">&copy; 2024 - Todos os direitos reservados - Bruno Hideki Sato Misufara
+            (●'◡'●) | Diogo Ferreira Martins ^_^ - 2024 </span>
     </div>
 </footer>
 

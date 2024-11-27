@@ -49,21 +49,29 @@ class App
     public function run()
     {
         if ($this->controller) {
+            // Define o nome do controlador com base na entrada
             $this->controllerName = ucwords($this->controller) . 'Controller';
-		//Retira espaços, caracteres especiais,dígitos Deixa somente letras Maiúsc. e Minúsc.
-            
-                $this->controllerName = preg_replace('/[^a-zA-Z]/i', '', $this->controllerName);
+            $this->controllerName = preg_replace('/[^a-zA-Z]/i', '', $this->controllerName); // Apenas letras
         } else {
-            $this->controllerName = "HomeController";  //Caso não digitou nada chama a Home
+            // Se nenhum controlador foi fornecido, define o padrão como UsuarioController
+            $this->controllerName = "UsuarioController";
+            $this->action = "login";
         }
-
-        $this->controllerFile   = $this->controllerName . '.php';
-        if (isset($this->action)){
-            $this->action           = preg_replace('/[^a-zA-Z]/i', '', $this->action);
+        
+        // Define a ação padrão se nenhuma for fornecida
+        if (isset($this->action)) {
+            $this->action = preg_replace('/[^a-zA-Z]/i', '', $this->action);
+        } else {
+            $this->action = "index";
         }
-        if (!$this->controller) {   //Caso não digitou o Controller - chama a Home
-            $this->controller = new HomeController($this);
-            $this->controller->index();
+        
+        // Verifica se o usuário está logado antes de redirecionar para HomeController
+        if ($this->controllerName === "UsuarioController" && $this->action === "login") {
+            if (isset($_SESSION['usuario_logado']) && $_SESSION['usuario_logado'] === true) {
+                // Se o usuário já está logado, redireciona para o HomeController
+                $this->controllerName = "HomeController";
+                $this->action = "index";
+            }
         }
 
         //Se a URL amigável contém o Controller e o Action, então carrega-os a partir daqui

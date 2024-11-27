@@ -11,6 +11,13 @@ class ProdutoController extends Controller
 {
     public function listar()
     {
+
+      if (!Sessao::retornaUsuarioLogado()) {
+        // Redireciona para a página de login
+        $this->redirect('/usuario/login');
+        return;
+    }
+
         $produtoDAO = new ProdutoDAO();  //Conecta ao Banco
 
        self::setViewParam('listaProdutos',$produtoDAO->listar());//busca os dados
@@ -22,6 +29,13 @@ class ProdutoController extends Controller
     
     public function editar($params)
     {
+
+      if (!Sessao::retornaUsuarioLogado()) {
+        // Redireciona para a página de login
+        $this->redirect('/usuario/login');
+        return;
+    }
+
       $id = $params[0]; //Pega o id do produto a ser editado
 
       $produtoDAO = new ProdutoDAO();
@@ -107,6 +121,13 @@ class ProdutoController extends Controller
     
     public function excluir($param)
     {
+
+      if (!Sessao::retornaUsuarioLogado()) {
+        // Redireciona para a página de login
+        $this->redirect('/usuario/login');
+        return;
+    }
+
       $objproduto = new Produto();
       //Pega o id do produto a ser excluído
       $objproduto->setId(Util::sanitizar($_POST['id']));
@@ -123,6 +144,13 @@ class ProdutoController extends Controller
     
      public function cadastrar()
     {
+
+      if (!Sessao::retornaUsuarioLogado()) {
+        // Redireciona para a página de login
+        $this->redirect('/usuario/login');
+        return;
+    }
+
         $this->render('/produto/cadastrar');
         Sessao::limpaMensagem();
         Sessao::limpaErro();

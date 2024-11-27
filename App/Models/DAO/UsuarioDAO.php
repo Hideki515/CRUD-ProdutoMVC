@@ -114,7 +114,6 @@ class UsuarioDAO extends BaseDAO
     {
         try {
             $login = $usuario->getLogin();
-
             // Adicione aspas simples ao redor do valor de $login
             return $this->delete('usuario', "login = '$login'");
 

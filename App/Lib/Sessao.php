@@ -57,4 +57,19 @@ class Sessao
         unset($_SESSION['erro']);
     }
 
+    public static function gravarUsuarioLogado($usuario){
+        $_SESSION['usuario_logado'] = $usuario;
+    }
+
+    public static function retornaUsuarioLogado()
+    {
+        // Retorna o usuário logado ou null se não estiver logado.
+        return isset($_SESSION['usuario_logado']) ? $_SESSION['usuario_logado'] : "";
+
+    }
+
+    public static function limpaUsuarioLogado(){
+        unset($_SESSION['usuario_logado']);
+    }
+
 }
