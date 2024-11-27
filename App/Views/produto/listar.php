@@ -40,12 +40,12 @@
             echo ' <td>'.$dataCadastro.'</td>';
             echo ' <td>
             <a href="http://'.APP_HOST.'/produto/editar/'.$id.'"
-            class="btn btn-info"
+            class="btn btn-outline-primary btn-sm"
             title="Editar produto <?= htmlspecialchars($id) ?>"
             aria-label="Editar produto <?= htmlspecialchars($id) ?>"><i class="bi bi-pencil-square"></i> Editar</a>
 
-            <a href="http://'.APP_HOST.'/produto/excluirConfirma/'.$id.'/'.urlencode($nome).'" class="btn btn-danger"
-                title="Excluir produto <?= htmlspecialchars($nome) ?>"
+            <a href="http://'.APP_HOST.'/produto/excluirConfirma/'.$id.'/'.urlencode($nome).'"
+                class="btn btn-outline-danger btn-sm" title="Excluir produto <?= htmlspecialchars($nome) ?>"
                 aria-label="Excluir produto <?= htmlspecialchars($nome) ?>">
                 <i class="bi bi-trash-fill"></i> Excluir
             </a>

@@ -41,7 +41,7 @@
                             value="<?php echo $viewVar['produto']->getQuantidade();?>" required>
                     </div>
                     <br>
-                    <button type="submit" class="btn btn-success"> <i class="bi bi-floppy"></i> Salvar</button>
+                    <button type="submit" class="btn btn-outline-success"> <i class="bi bi-floppy"></i> Salvar</button>
                 </form>
             </div>
             <div class=" col-md-3"></div>
